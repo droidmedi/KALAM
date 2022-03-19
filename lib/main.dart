@@ -1,4 +1,4 @@
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'affichageimages.dart';
@@ -22,9 +22,9 @@ class Acceuil extends StatefulWidget {
 
 class HomePage extends State<Acceuil> {
   static const kRouteName = '/AnimalSounds';
-  bool _pinned = true;
-  bool _snap = true;
-  bool _floating = true;
+  final bool _pinned = true;
+  final bool _snap = true;
+  final bool _floating = true;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ class HomePage extends State<Acceuil> {
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
-            pinned: this._pinned,
-            snap: this._snap,
-            floating: this._floating,
+            pinned: _pinned,
+            snap: _snap,
+            floating: _floating,
             expandedHeight: 160.0,
             flexibleSpace: FlexibleSpaceBar(
               title: const Text("تهاني المناسبات"),
@@ -116,13 +116,13 @@ class HomePage extends State<Acceuil> {
                                 onTap: () {
                                   var route = MaterialPageRoute(
                                     builder: (BuildContext context) =>
-                                        AffImage(),
+                                        AffFete(),
                                   );
                                   Navigator.of(context).push(route);
                                   // Navigator.push(context, _PageTwo());
                                 },
                                 child: Image.asset(
-                                  'assets/TAHAIN A1.jpeg',
+                                  'assets/a1.png',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -150,7 +150,7 @@ class HomePage extends State<Acceuil> {
                     ],
                   ),
                 ),
-                Card(
+                Card( //zawaj
                   color: Colors.white,
                   child: Column(
                     children: <Widget>[
@@ -170,7 +170,7 @@ class HomePage extends State<Acceuil> {
                                   // Navigator.push(context, _PageTwo());
                                 },
                                 child: Image.asset(
-                                  'assets/cat2.jpg',
+                                  'assets/z1.jpg',
                                   fit: BoxFit.cover,
                                 ),
                               ),

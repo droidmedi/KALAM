@@ -2,20 +2,6 @@ import 'package:flutter/material.dart';
 
 
 class AffRamadan extends StatelessWidget {
-  List<String> images1 = [
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-  ];
   List<String> Rimg = [
     'assets/TAHANI R1.jpeg',
     'assets/TAHANI R2.jpeg',
@@ -30,26 +16,14 @@ class AffRamadan extends StatelessWidget {
     'assets/TAHANI R11.jpeg',
     'assets/TAHANI R12.jpeg',
     'assets/TAHANI R13.jpeg',
-
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-
-  ];
-  //final int value=1;
-  // AffImage({Key key, this.value}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("تهاني رمضان"),
+          title: const Text("تهاني رمضان"),
 
           backgroundColor: Colors.blueGrey,
 
@@ -73,7 +47,7 @@ class AffRamadan extends StatelessWidget {
   }
 }
 class AffFete extends StatelessWidget {
-  List<String> images1 = [
+ final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -87,14 +61,7 @@ class AffFete extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
 
-  ];
   //final int value=1;
   // AffImage({Key key, this.value}) : super(key: key);
 
@@ -104,15 +71,15 @@ class AffFete extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
-          backgroundColor: Colors.red,
+          title: const Text("تهاني الاعياد"),
+          backgroundColor: Colors.blueGrey,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
@@ -126,7 +93,7 @@ class AffFete extends StatelessWidget {
   }
 }
 class AffZawaj extends StatelessWidget {
-  List<String> images1 = [
+ final  List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -140,16 +107,6 @@ class AffZawaj extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-
-  ];
-  //final int value=1;
-  // AffImage({Key key, this.value}) : super(key: key);
 
 
   @override
@@ -157,15 +114,15 @@ class AffZawaj extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
+          title: const Text("Flutter GridView Demo"),
           backgroundColor: Colors.red,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
@@ -179,7 +136,7 @@ class AffZawaj extends StatelessWidget {
   }
 }
 class AffImage extends StatelessWidget {
-  List<String> images1 = [
+  final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -193,16 +150,7 @@ class AffImage extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
 
-  ];
-  //final int value=1;
- // AffImage({Key key, this.value}) : super(key: key);
 
 
   @override
@@ -210,15 +158,15 @@ class AffImage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
+          title: const Text("Flutter GridView Demo"),
           backgroundColor: Colors.red,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
@@ -232,7 +180,7 @@ class AffImage extends StatelessWidget {
   }
 }
 class AffNajah extends StatelessWidget {
-  List<String> images1 = [
+  final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -246,16 +194,7 @@ class AffNajah extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
 
-  ];
-  //final int value=1;
-  // AffImage({Key key, this.value}) : super(key: key);
 
 
   @override
@@ -285,7 +224,7 @@ class AffNajah extends StatelessWidget {
   }
 }
 class AffBebe extends StatelessWidget {
-  List<String> images1 = [
+  final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -299,16 +238,7 @@ class AffBebe extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
-  List<String> images2 = [
-    'assets/cat1.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
 
-  ];
-  //final int value=1;
-  // AffImage({Key key, this.value}) : super(key: key);
 
 
   @override
