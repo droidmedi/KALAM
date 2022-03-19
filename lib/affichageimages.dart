@@ -37,11 +37,11 @@ class AffRamadan extends StatelessWidget {
           backgroundColor: Colors.red,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
@@ -245,15 +245,15 @@ class AffNajah extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
+          title: const Text("Flutter GridView Demo"),
           backgroundColor: Colors.red,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
@@ -298,15 +298,15 @@ class AffBebe extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
+          title: const Text("Flutter GridView Demo"),
           backgroundColor: Colors.red,
         ),
         body: Container(
-            padding: EdgeInsets.all(12.0),
+            padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
               itemCount: images1.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
