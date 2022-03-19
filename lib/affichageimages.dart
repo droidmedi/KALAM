@@ -16,6 +16,22 @@ class AffRamadan extends StatelessWidget {
     'assets/cat6.jpg',
     'assets/cat7.jpg',
   ];
+  List<String> Rimg = [
+    'assets/TAHANI R1.jpeg',
+    'assets/TAHANI R2.jpeg',
+    'assets/TAHANI R3.jpeg',
+    'assets/TAHANI R4.jpeg',
+    'assets/TAHANI R5.jpeg',
+    'assets/TAHANI R6.jpeg',
+    'assets/TAHANI R7.jpeg',
+    'assets/TAHANI R8.jpeg',
+    'assets/TAHANI R9.jpeg',
+    'assets/TAHANI R10.jpeg',
+    'assets/TAHANI R11.jpeg',
+    'assets/TAHANI R12.jpeg',
+    'assets/TAHANI R13.jpeg',
+
+  ];
   List<String> images2 = [
     'assets/cat1.jpg',
     'assets/cat3.jpg',
@@ -33,21 +49,23 @@ class AffRamadan extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter GridView Demo"),
-          backgroundColor: Colors.red,
+          title: Text("تهاني رمضان"),
+
+          backgroundColor: Colors.blueGrey,
+
         ),
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
 
-              itemCount: images1.length,
+              itemCount: Rimg.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0
               ),
               itemBuilder: (BuildContext context, int index){
-                return Image.asset(images1[index]);
+                return Image.asset(Rimg[index]);
               },
             )),
       ),

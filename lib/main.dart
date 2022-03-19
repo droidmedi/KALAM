@@ -40,7 +40,7 @@ class HomePage extends State<Acceuil> {
             flexibleSpace: FlexibleSpaceBar(
               title: const Text("تهاني المناسبات"),
               background: Image.asset(
-                'assets/material_design_3.png',
+                'assets/monasabat.png',
                 fit: BoxFit.fill,
               ),
             ),
@@ -53,29 +53,7 @@ class HomePage extends State<Acceuil> {
             child: ListView(
               padding: const EdgeInsets.all(8.0),
               children: [
-                Card(
-                  color: Colors.blue,
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0),
-                    ),
-                  ),
-                  child: SizedBox(
-                    height: 100.0,
-                    child: Row(
-                      children: const <Widget>[
-                        Expanded(
-                          child: Text(
-                            'تصنيفات',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 40.0),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+
                 Card(
                   color: Colors.white,
                   child: Column(
@@ -90,13 +68,13 @@ class HomePage extends State<Acceuil> {
                                 onTap: () {
                                   var route = MaterialPageRoute(
                                     builder: (BuildContext context) =>
-                                        AffImage(),
+                                        AffRamadan(),
                                   );
                                   Navigator.of(context).push(route);
                                   // Navigator.push(context, _PageTwo());
                                 },
                                 child: Image.asset(
-                                  'assets/cat2.jpg',
+                                  'assets/TAHANI R7.jpeg',
                                   fit: BoxFit.cover,
                                 ),
                               ),
