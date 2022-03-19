@@ -54,7 +54,7 @@ class HomePage extends State<Acceuil> {
               padding: const EdgeInsets.all(8.0),
               children: [
 
-                Card(
+                Card(  //ramadane
                   color: Colors.white,
                   child: Column(
                     children: <Widget>[
@@ -102,7 +102,7 @@ class HomePage extends State<Acceuil> {
                     ],
                   ),
                 ),
-                Card(
+                Card(// aid
                   color: Colors.white,
                   child: Column(
                     children: <Widget>[
@@ -122,7 +122,7 @@ class HomePage extends State<Acceuil> {
                                   // Navigator.push(context, _PageTwo());
                                 },
                                 child: Image.asset(
-                                  'assets/cat2.jpg',
+                                  'assets/TAHAIN A1.jpeg',
                                   fit: BoxFit.cover,
                                 ),
                               ),
@@ -139,7 +139,7 @@ class HomePage extends State<Acceuil> {
                                   style: Theme.of(context)
                                       .textTheme
                                       .headline3!
-                                      .copyWith(color: Colors.black),
+                                      .copyWith(color: Colors.white),
                                 ),
                               ),
                             )
