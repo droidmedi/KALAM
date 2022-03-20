@@ -1,34 +1,74 @@
 //import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'affichageimages.dart';
 
 void main() => runApp(Kalam());
 
 class Kalam extends StatelessWidget {
+  Kalam({Key? key}) : super(key: key);
+
+  final _router = GoRouter(
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const HomePage(),
+        routes: [
+          GoRoute(
+            name: 'ramadan',
+            path: 'ramadan',
+            builder: (context, state) => AffRamadan(),
+          ),
+          GoRoute(
+            name: 'fete',
+            path: 'fete',
+            builder: (context, state) => AffFete(),
+          ),
+          GoRoute(
+            name: 'zawaj',
+            path: 'zawaj',
+            builder: (context, state) => AffZawaj(),
+          ),
+          GoRoute(
+            name: 'bebe',
+            path: 'bebe',
+            builder: (context, state) => AffBebe(),
+          ),
+          GoRoute(
+            name: 'najah',
+            path: 'najah',
+            builder: (context, state) => AffNajah(),
+          ),
+        ],
+      ),
+    ],
+    debugLogDiagnostics: true,
+  );
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routeInformationParser: _router.routeInformationParser,
+      routerDelegate: _router.routerDelegate,
       title: "تهاني المناسبات",
-      home: Acceuil(),
     );
   }
 }
 
-class Acceuil extends StatefulWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
-  HomePage createState() => HomePage();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class HomePage extends State<Acceuil> {
-  static const kRouteName = '/AnimalSounds';
+class _HomePageState extends State<HomePage> {
   final bool _pinned = true;
   final bool _snap = true;
   final bool _floating = true;
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('RouteName=${ModalRoute.of(context)?.settings.name}');
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
@@ -53,251 +93,84 @@ class HomePage extends State<Acceuil> {
             child: ListView(
               padding: const EdgeInsets.all(8.0),
               children: [
-
-                Card(  //ramadane
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 140.0,
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: InkWell(
-                                splashColor: Colors.deepOrange,
-                                onTap: () {
-                                  var route = MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AffRamadan(),
-                                  );
-                                  Navigator.of(context).push(route);
-                                  // Navigator.push(context, _PageTwo());
-                                },
-                                child: Image.asset(
-                                  'assets/TAHANI R7.jpeg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 16.0,
-                              left: 16.0,
-                              right: 16.0,
-                              child: FittedBox(
-                                fit: BoxFit.scaleDown,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'تهاني رمضان',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(color: Colors.black),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-
-                    ],
-                  ),
+                buildHomeCard(
+                  context: context,
+                  title: 'تهاني رمضان',
+                  imageName: 'assets/TAHANI R7.jpeg',
+                  routeName: 'ramadan',
                 ),
-                Card(// aid
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 140.0,
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: InkWell(
-                                splashColor: Colors.deepOrange,
-                                onTap: () {
-                                  var route = MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AffFete(),
-                                  );
-                                  Navigator.of(context).push(route);
-                                  // Navigator.push(context, _PageTwo());
-                                },
-                                child: Image.asset(
-                                  'assets/a1.png',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 16.0,
-                              left: 16.0,
-                              right: 16.0,
-                              child: FittedBox(
-                                fit: BoxFit.scaleDown,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'تهاني الاعياد',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(color: Colors.white),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-
-                    ],
-                  ),
+                buildHomeCard(
+                  context: context,
+                  title: 'تهاني الاعياد',
+                  imageName: 'assets/a1.png',
+                  routeName: 'fete',
                 ),
-                Card( //zawaj
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 140.0,
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: InkWell(
-                                splashColor: Colors.deepOrange,
-                                onTap: () {
-                                  var route = MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AffImage(),
-                                  );
-                                  Navigator.of(context).push(route);
-                                  // Navigator.push(context, _PageTwo());
-                                },
-                                child: Image.asset(
-                                  'assets/z1.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 16.0,
-                              left: 16.0,
-                              right: 16.0,
-                              child: FittedBox(
-                                fit: BoxFit.scaleDown,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'تهاني الزواج',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(color: Colors.black),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-
-                    ],
-                  ),
+                buildHomeCard(
+                  context: context,
+                  title: 'تهاني الزواج',
+                  imageName: 'assets/z1.jpg',
+                  routeName: 'zawaj',
                 ),
-                Card(
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 140.0,
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: InkWell(
-                                splashColor: Colors.deepOrange,
-                                onTap: () {
-                                  var route = MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AffImage(),
-                                  );
-                                  Navigator.of(context).push(route);
-                                  // Navigator.push(context, _PageTwo());
-                                },
-                                child: Image.asset(
-                                  'assets/cat2.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 16.0,
-                              left: 16.0,
-                              right: 16.0,
-                              child: FittedBox(
-                                fit: BoxFit.scaleDown,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'تهاني المولود الجديد',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(color: Colors.black),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-
-                    ],
-                  ),
+                buildHomeCard(
+                  context: context,
+                  title: 'تهاني المولود الجديد',
+                  imageName: 'assets/cat2.jpg',
+                  routeName: "bebe",
                 ),
-                Card(
-                  color: Colors.white,
-                  child: Column(
-                    children: <Widget>[
-                      SizedBox(
-                        height: 140.0,
-                        child: Stack(
-                          children: <Widget>[
-                            Positioned.fill(
-                              child: InkWell(
-                                splashColor: Colors.deepOrange,
-                                onTap: () {
-                                  var route = MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        AffImage(),
-                                  );
-                                  Navigator.of(context).push(route);
-                                  // Navigator.push(context, _PageTwo());
-                                },
-                                child: Image.asset(
-                                  'assets/cat2.jpg',
-                                  fit: BoxFit.cover,
-                                ),
-                              ),
-                            ),
-                            Positioned(
-                              bottom: 16.0,
-                              left: 16.0,
-                              right: 16.0,
-                              child: FittedBox(
-                                fit: BoxFit.scaleDown,
-                                alignment: Alignment.center,
-                                child: Text(
-                                  'تهاني النجاح',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headline3!
-                                      .copyWith(color: Colors.black),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-
-                    ],
-                  ),
+                buildHomeCard(
+                  context: context,
+                  title: 'تهاني النجاح',
+                  imageName: 'assets/cat2.jpg',
+                  routeName: "najah",
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Card buildHomeCard({
+    required BuildContext context,
+    required String title,
+    required String imageName,
+    required String routeName,
+  }) {
+    return Card(
+      // aid
+      color: Colors.white,
+      child: GestureDetector(
+        onTap: () => GoRouter.of(context).goNamed(routeName),
+        child: SizedBox(
+          height: 140.0,
+          child: Stack(
+            children: <Widget>[
+              Positioned.fill(
+                child: Image.asset(
+                  imageName,
+                  fit: BoxFit.fill,
+                ),
+              ),
+              Positioned(
+                bottom: 16.0,
+                left: 16.0,
+                right: 16.0,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  alignment: Alignment.center,
+                  child: Text(
+                    title,
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline3!
+                        .copyWith(color: Colors.white),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
