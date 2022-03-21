@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class AffRamadan extends StatelessWidget {
   List<String> Rimg = [
     'assets/TAHANI R1.jpeg',
@@ -24,30 +23,66 @@ class AffRamadan extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("تهاني رمضان"),
-
           backgroundColor: Colors.blueGrey,
-
         ),
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: Rimg.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
-                return Image.asset(Rimg[index]);
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
+                return GestureDetector(
+                    child: GridTile(
+                        child:
+                        Image.asset(Rimg[index])
+                    ),
+                  onTap: (){
+                    var route = new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                      new DetailScreen(Rimg[index]),
+                    );
+                    Navigator.of(context).push(route);
+                      //cellClick(Rimg[index]);
+                  },
+                );
+                //Image.asset(Rimg[index]);
               },
             )),
       ),
     );
   }
+  cellClick(String ss){
+    print(ss);
+  }
 }
+class DetailScreen extends StatelessWidget {
+
+  final String value='';
+
+  DetailScreen(String ss);
+
+ // DetailScreen({Key key, this.value}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    // Use the Todo to create the UI.
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('aa'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Text("kkk"),
+      ),
+    );
+  }
+
+}
+
 class AffFete extends StatelessWidget {
- final List<String> images1 = [
+  final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -65,7 +100,6 @@ class AffFete extends StatelessWidget {
   //final int value=1;
   // AffImage({Key key, this.value}) : super(key: key);
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -77,14 +111,12 @@ class AffFete extends StatelessWidget {
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: images1.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
                 return Image.asset(images1[index]);
               },
             )),
@@ -92,8 +124,9 @@ class AffFete extends StatelessWidget {
     );
   }
 }
+
 class AffZawaj extends StatelessWidget {
- final  List<String> images1 = [
+  final List<String> images1 = [
     'assets/cat2.jpg',
     'assets/cat3.jpg',
     'assets/cat4.jpg',
@@ -108,7 +141,6 @@ class AffZawaj extends StatelessWidget {
     'assets/cat7.jpg',
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -120,14 +152,12 @@ class AffZawaj extends StatelessWidget {
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: images1.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
                 return Image.asset(images1[index]);
               },
             )),
@@ -135,6 +165,7 @@ class AffZawaj extends StatelessWidget {
     );
   }
 }
+
 class AffImage extends StatelessWidget {
   final List<String> images1 = [
     'assets/cat2.jpg',
@@ -151,8 +182,6 @@ class AffImage extends StatelessWidget {
     'assets/cat7.jpg',
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -164,14 +193,12 @@ class AffImage extends StatelessWidget {
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: images1.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
                 return Image.asset(images1[index]);
               },
             )),
@@ -179,6 +206,7 @@ class AffImage extends StatelessWidget {
     );
   }
 }
+
 class AffNajah extends StatelessWidget {
   final List<String> images1 = [
     'assets/cat2.jpg',
@@ -195,8 +223,6 @@ class AffNajah extends StatelessWidget {
     'assets/cat7.jpg',
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -208,14 +234,12 @@ class AffNajah extends StatelessWidget {
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: images1.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
                 return Image.asset(images1[index]);
               },
             )),
@@ -223,6 +247,7 @@ class AffNajah extends StatelessWidget {
     );
   }
 }
+
 class AffBebe extends StatelessWidget {
   final List<String> images1 = [
     'assets/cat2.jpg',
@@ -239,8 +264,6 @@ class AffBebe extends StatelessWidget {
     'assets/cat7.jpg',
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -252,14 +275,12 @@ class AffBebe extends StatelessWidget {
         body: Container(
             padding: const EdgeInsets.all(12.0),
             child: GridView.builder(
-
               itemCount: images1.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 4.0,
-                  mainAxisSpacing: 4.0
-              ),
-              itemBuilder: (BuildContext context, int index){
+                  mainAxisSpacing: 4.0),
+              itemBuilder: (BuildContext context, int index) {
                 return Image.asset(images1[index]);
               },
             )),
