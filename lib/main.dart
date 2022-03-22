@@ -2,7 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'affichageimages.dart';
+import 'package:kalam/image_preview.dart';
+import 'package:kalam/image_store.dart';
+
+import 'list_image_page.dart';
 
 void main() => runApp(Kalam());
 
@@ -10,35 +13,55 @@ class Kalam extends StatelessWidget {
   Kalam({Key? key}) : super(key: key);
 
   final _router = GoRouter(
+    // initialLocation: '/preview',
     routes: [
+      GoRoute(
+          name: 'preview',
+          path: '/preview/:imageName',
+          builder: (context, state) {
+            final imageName = state.params['imageName']!;
+            return ImagePreview(imageName: imageName);
+          }),
       GoRoute(
         path: '/',
         builder: (context, state) => const HomePage(),
         routes: [
+          // GoRoute(
+          //     name: 'list',
+          //     path: 'list/:listName',
+          //     builder: (context, state) {
+          //        final imageName = state.params['imageName']!;
+          //       return ListImagePage(listImageName: ListImageName.ramadan);
+          //     }),
           GoRoute(
             name: 'ramadan',
             path: 'ramadan',
-            builder: (context, state) => AffRamadan(),
+            builder: (context, state) =>
+                const ListImagePage(listImageName: ListImageName.ramadan),
           ),
           GoRoute(
             name: 'fete',
             path: 'fete',
-            builder: (context, state) => AffFete(),
+            builder: (context, state) =>
+                const ListImagePage(listImageName: ListImageName.fete),
           ),
           GoRoute(
             name: 'zawaj',
             path: 'zawaj',
-            builder: (context, state) => AffZawaj(),
+            builder: (context, state) =>
+                const ListImagePage(listImageName: ListImageName.zawaj),
           ),
           GoRoute(
             name: 'bebe',
             path: 'bebe',
-            builder: (context, state) => AffBebe(),
+            builder: (context, state) =>
+                const ListImagePage(listImageName: ListImageName.bebe),
           ),
           GoRoute(
             name: 'najah',
             path: 'najah',
-            builder: (context, state) => AffNajah(),
+            builder: (context, state) =>
+                const ListImagePage(listImageName: ListImageName.najah),
           ),
         ],
       ),
