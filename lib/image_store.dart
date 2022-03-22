@@ -15,6 +15,11 @@ class AllImages {
     'assets/TAHANI R11.jpeg',
     'assets/TAHANI R12.jpeg',
     'assets/TAHANI R13.jpeg',
+    'assets/R1.png',
+    'assets/R2.png',
+    'assets/R3.png',
+    'assets/R4.png',
+    'assets/R5.png',
   ];
 
   static const List<String> fete = [
