@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -48,8 +49,8 @@ class _ListImagePageState extends State<ListImagePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
-        backgroundColor: Colors.red,
+        title: Text('            '+title),
+        backgroundColor: Colors.deepPurple,
       ),
       body: Container(
           padding: const EdgeInsets.all(12.0),
