@@ -90,6 +90,10 @@ flutter:
     - z3.jpg
     - Z2.webp
     - a1.png
+    - N1.jpg
+    - NAISSANCE.jpg
+    - RE1.jpg
+    - T1.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

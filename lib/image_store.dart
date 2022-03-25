@@ -41,18 +41,12 @@ class AllImages {
   ];
 
   static const List<String> bebe = [
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
+    'assets/N1.jpg',
+    'assets/N1.jpg',
+    'assets/N1.jpg',
+    'assets/N1.jpg',
+    'assets/N1.jpg',
+    'assets/N1.jpg',
   ];
 
   static const List<String> najah = [
