@@ -82,9 +82,13 @@ flutter:
     - R3.png
     - R4.png
     - R5.png
+    - R14.jpeg
+    - A1.jpeg
     - monasabat.png
     - TAHAIN A1.jpeg
     - z1.jpg
+    - z3.jpg
+    - Z2.webp
     - a1.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

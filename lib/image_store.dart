@@ -15,6 +15,7 @@ class AllImages {
     'assets/TAHANI R11.jpeg',
     'assets/TAHANI R12.jpeg',
     'assets/TAHANI R13.jpeg',
+    'assets/TAHANI R14.jpeg',
     'assets/R1.png',
     'assets/R2.png',
     'assets/R3.png',
@@ -23,33 +24,20 @@ class AllImages {
   ];
 
   static const List<String> fete = [
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
+    'assets/A1.jpeg',
+    'assets/A1.jpeg',
+    'assets/A1.jpeg',
+    'assets/A1.jpeg',
+    'assets/A1.jpeg',
+    'assets/A1.jpeg',
   ];
 
   static const List<String> zawaj = [
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
+    'assets/Z2.webp',
+    'assets/z3.jpg',
+    'assets/Z2.webp',
+    'assets/Z2.webp',
+    'assets/Z2.webp',
   ];
 
   static const List<String> bebe = [
