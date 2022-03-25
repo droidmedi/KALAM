@@ -101,9 +101,9 @@ class _HomePageState extends State<HomePage> {
             floating: _floating,
             expandedHeight: 160.0,
             flexibleSpace: FlexibleSpaceBar(
-              title: const Text("تهاني المناسبات"),
+              title: const Text("        تهاني المناسبات"),
               background: Image.asset(
-                'assets/monasabat.png',
+                'assets/T1.jpg',
                 fit: BoxFit.fill,
               ),
             ),
@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
                 buildHomeCard(
                   context: context,
                   title: 'تهاني رمضان',
-                  imageName: 'assets/TAHANI R7.jpeg',
+                  imageName: 'assets/monasabat.png',
                   routeName: 'ramadan',
                 ),
                 buildHomeCard(
@@ -137,13 +137,13 @@ class _HomePageState extends State<HomePage> {
                 buildHomeCard(
                   context: context,
                   title: 'تهاني المولود الجديد',
-                  imageName: 'assets/cat2.jpg',
+                  imageName: 'assets/NAISSANCE.jpg',
                   routeName: "bebe",
                 ),
                 buildHomeCard(
                   context: context,
                   title: 'تهاني النجاح',
-                  imageName: 'assets/cat2.jpg',
+                  imageName: 'assets/RE1.jpg',
                   routeName: "najah",
                 ),
               ],

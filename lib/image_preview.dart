@@ -14,7 +14,7 @@ class ImagePreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Image Preview"),
+        title: const Text("             مشاركة الصور"),
       ),
       body: Column(
         children: [
@@ -24,16 +24,25 @@ class ImagePreview extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          TextButton.icon(
-            onPressed: () async {
-              ByteData imagebyte = await rootBundle.load(imageName);
-              final temp = await getTemporaryDirectory();
-              final path = '${temp.path}/image1.jpg';
-              File(path).writeAsBytesSync(imagebyte.buffer.asUint8List());
-              await Share.shareFiles([path], text: '');
-            },
-            icon: const Icon(Icons.share),
-            label: const Text('share image'),
+          Card(
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: TextButton.icon(
+                onPressed: () async {
+                  ByteData imagebyte = await rootBundle.load(imageName);
+                  final temp = await getTemporaryDirectory();
+                  final path = '${temp.path}/image1.jpg';
+                  File(path).writeAsBytesSync(imagebyte.buffer.asUint8List());
+                  await Share.shareFiles([path], text: '');
+                },
+                icon: const Icon(Icons.share,size: 30.0,color: Colors.deepPurple,),
+                label: const Text('إرسال',style: TextStyle(fontSize: 30.0,color: Colors.deepPurple),),
+
+              ),
+            ),
+            color: Colors.pink[100],
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(23.0))),
           )
         ],
       ),
