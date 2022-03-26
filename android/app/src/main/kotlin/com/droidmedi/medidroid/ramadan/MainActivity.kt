@@ -1,4 +1,4 @@
-package com.droidmedi.medidroid.kalamcom.droidmedi.medidroid.kalam.kalam
+package com.droidmedi.medidroid.ramadan
 
 import io.flutter.embedding.android.FlutterActivity
 
