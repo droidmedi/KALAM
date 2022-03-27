@@ -15,7 +15,6 @@ class AllImages {
     'assets/TAHANI R11.jpeg',
     'assets/TAHANI R12.jpeg',
     'assets/TAHANI R13.jpeg',
-    'assets/TAHANI R14.jpeg',
     'assets/R1.png',
     'assets/R2.png',
     'assets/R3.png',
