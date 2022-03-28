@@ -49,17 +49,11 @@ class AllImages {
   ];
 
   static const List<String> najah = [
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
+    'assets/NAJAH1.png',
     'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
-    'assets/cat2.jpg',
-    'assets/cat3.jpg',
-    'assets/cat4.jpg',
-    'assets/cat5.jpg',
-    'assets/cat6.jpg',
-    'assets/cat7.jpg',
+    'assets/NAJAH1.png',
+    'assets/NAJAH1.png',
+    'assets/NAJAH1.png',
+    'assets/NAJAH1.png',
   ];
 }
