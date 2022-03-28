@@ -24,10 +24,10 @@ class AllImages {
 
   static const List<String> fete = [
     'assets/A1.jpeg',
-    'assets/A1.jpeg',
-    'assets/A1.jpeg',
-    'assets/A1.jpeg',
-    'assets/A1.jpeg',
+    'assets/A2.png',
+    'assets/A2.png',
+    'assets/A2.png',
+    'assets/A2.png',
     'assets/A1.jpeg',
   ];
 

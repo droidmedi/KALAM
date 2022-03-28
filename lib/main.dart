@@ -4,10 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:kalam/image_preview.dart';
 import 'package:kalam/image_store.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+import 'ad_helper.dart';
 import 'list_image_page.dart';
 
-void main() => runApp(Kalam());
+//void main() => runApp(Kalam());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
+
+  runApp(Kalam());
+}
+
 
 class Kalam extends StatelessWidget {
   Kalam({Key? key}) : super(key: key);
@@ -86,13 +95,53 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late BannerAd _bottomBannerAd;
+  bool _isBottomBannerAdLoaded = false;
+
+  void _createBottomBannerAd() {
+    _bottomBannerAd = BannerAd(
+      adUnitId: AdHelper.bannerAdUnitId,
+      size: AdSize.banner,
+      request: AdRequest(),
+      listener: BannerAdListener(
+        onAdLoaded: (_) {
+          setState(() {
+            _isBottomBannerAdLoaded = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+        },
+      ),
+    );
+    _bottomBannerAd.load();
+  }
   final bool _pinned = true;
   final bool _snap = true;
   final bool _floating = true;
 
   @override
+  void initState() {
+    super.initState();
+    _createBottomBannerAd();
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _bottomBannerAd.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: _isBottomBannerAdLoaded
+          ? Container(
+        height: _bottomBannerAd.size.height.toDouble(),
+        width: _bottomBannerAd.size.width.toDouble(),
+        child: AdWidget(ad: _bottomBannerAd),
+      )
+          : null,
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(

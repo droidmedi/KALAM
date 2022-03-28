@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class ImagePreview extends StatelessWidget {
   const ImagePreview({Key? key, required this.imageName}) : super(key: key);
@@ -43,6 +44,9 @@ class ImagePreview extends StatelessWidget {
             color: Colors.pink[100],
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(23.0))),
+          ),
+          Card(child: new Text('ss'),
+
           )
         ],
       ),
