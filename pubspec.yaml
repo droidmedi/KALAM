@@ -64,43 +64,37 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - material_design_3.png
-    - cat2.jpg
-    - cat3.jpg
-    - cat4.jpg
-    - cat5.jpg
-    - cat6.jpg
-    - cat7.jpg
-    - TAHANI R1.jpeg
-    - TAHANI R2.jpeg
-    - TAHANI R3.jpeg
-    - TAHANI R4.jpeg
-    - TAHANI R5.jpeg
-    - TAHANI R6.jpeg
-    - TAHANI R7.jpeg
-    - TAHANI R8.jpeg
-    - TAHANI R9.jpeg
-    - TAHANI R10.jpeg
-    - TAHANI R11.jpeg
-    - TAHANI R12.jpeg
-    - TAHANI R13.jpeg
+    - NAJAH2.jpg
     - R1.png
     - R2.png
     - R3.png
     - R4.png
     - R5.png
+    - R6.jpeg
+    - R8.jpeg
+    - R9.jpeg
+    - R10.jpeg
+    - R11.jpeg
+    - R12.jpeg
     - R14.jpeg
+    - R15.jpeg
+    - R16.jpeg
+    - R17.jpeg
+    - R18.jpeg
+    - R19.jpeg
+    - R20.jpeg
+    - R21.jpeg
     - A1.jpeg
-    - monasabat.png
-    - TAHAIN A1.jpeg
-    - z1.jpg
-    - z3.jpg
+    - R0.png
+    - A3.jpeg
+    - Z0.jpg
+    - Z3.jpg
     - Z2.webp
-    - a1.png
+    - A0.png
     - A2.png
     - N1.jpg
-    - NAISSANCE.jpg
-    - RE1.jpg
+    - N0.jpg
+    - NAJAH0.jpg
     - T1.jpg
     - NAJAH1.png
   # An image asset can refer to one or more resolution-specific "variants", see

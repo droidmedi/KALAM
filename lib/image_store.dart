@@ -2,19 +2,22 @@ enum ListImageName { ramadan, fete, zawaj, bebe, najah }
 
 class AllImages {
   static const List<String> ramadan = [
-    'assets/TAHANI R1.jpeg',
-    'assets/TAHANI R2.jpeg',
-    'assets/TAHANI R3.jpeg',
-    'assets/TAHANI R4.jpeg',
-    'assets/TAHANI R5.jpeg',
-    'assets/TAHANI R6.jpeg',
-    'assets/TAHANI R7.jpeg',
-    'assets/TAHANI R8.jpeg',
-    'assets/TAHANI R9.jpeg',
-    'assets/TAHANI R10.jpeg',
-    'assets/TAHANI R11.jpeg',
-    'assets/TAHANI R12.jpeg',
-    'assets/TAHANI R13.jpeg',
+    'assets/R6.jpeg',
+    //'assets/R7.jpeg',
+    'assets/R8.jpeg',
+    'assets/R9.jpeg',
+    'assets/R10.jpeg',
+    'assets/R11.jpeg',
+    'assets/R12.jpeg',
+    //'assets/R13.jpeg',
+    'assets/R14.jpeg',
+    'assets/R15.jpeg',
+    'assets/R16.jpeg',
+    'assets/R17.jpeg',
+    'assets/R18.jpeg',
+    'assets/R19.jpeg',
+    'assets/R20.jpeg',
+    'assets/R21.jpeg',
     'assets/R1.png',
     'assets/R2.png',
     'assets/R3.png',
@@ -25,35 +28,20 @@ class AllImages {
   static const List<String> fete = [
     'assets/A1.jpeg',
     'assets/A2.png',
-    'assets/A2.png',
-    'assets/A2.png',
-    'assets/A2.png',
-    'assets/A1.jpeg',
   ];
 
   static const List<String> zawaj = [
     'assets/Z2.webp',
-    'assets/z3.jpg',
-    'assets/Z2.webp',
-    'assets/Z2.webp',
-    'assets/Z2.webp',
+    'assets/Z3.jpg',
   ];
 
   static const List<String> bebe = [
-    'assets/N1.jpg',
-    'assets/N1.jpg',
-    'assets/N1.jpg',
-    'assets/N1.jpg',
     'assets/N1.jpg',
     'assets/N1.jpg',
   ];
 
   static const List<String> najah = [
     'assets/NAJAH1.png',
-    'assets/cat4.jpg',
-    'assets/NAJAH1.png',
-    'assets/NAJAH1.png',
-    'assets/NAJAH1.png',
-    'assets/NAJAH1.png',
+    'assets/NAJAH2.jpg',
   ];
 }
