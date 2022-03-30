@@ -16,6 +16,7 @@ class ImagePreview extends StatelessWidget {
         title: const Text("             مشاركة الصور"),backgroundColor: Colors.deepPurple,
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Card(
             child: Image.asset(
@@ -25,7 +26,7 @@ class ImagePreview extends StatelessWidget {
           ),
           Card(
             child: Padding(
-              padding: const EdgeInsets.all(12.0),
+              padding: const EdgeInsets.all(6.0),
               child: TextButton.icon(
                 onPressed: () async {
                   ByteData imagebyte = await rootBundle.load(imageName);
@@ -39,7 +40,7 @@ class ImagePreview extends StatelessWidget {
 
               ),
             ),
-            color: Colors.pink[100],
+            color: Colors.purple[200],
             shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(23.0))),
           ),
